@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="submit" value="Refresh" onclick="myFunction();"></input>
+&nbsp;&nbsp;&nbsp;&nbsp; Enter desired country name in textboxes below, country names are all small-case, as seen at 
+<a href="https://www.worldometers.info/coronavirus/" target="_blank"> https://www.worldometers.info/coronavirus/ </a>
+
+<table style="width:100%" border="1">
+  <tr style="height:500px">
+    <td><input id="country1" type="text" value="india"> 
+	<iframe id="iframe1" src="https://www.worldometers.info/coronavirus/country/india/#graph-cases-daily" title="India" width="100%" height="500">
+		</iframe>
+
+	</td>
+    <td><input id="country2" type="text" value="us"> 
+	<iframe id="iframe2" src="https://www.worldometers.info/coronavirus/country/us/#graph-cases-daily" title="US" width="100%" height="500">
+		</iframe>
+	</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  document.getElementById('iframe1').src= "https://www.worldometers.info/coronavirus/country/"+document.getElementById('country1').value+"/#graph-cases-daily";
+  document.getElementById('iframe2').src= "https://www.worldometers.info/coronavirus/country/"+document.getElementById('country2').value+"/#graph-cases-daily";
+}
+</script>
+
+</body>
+</html>
